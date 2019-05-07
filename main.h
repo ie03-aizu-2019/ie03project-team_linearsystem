@@ -5,7 +5,7 @@ typedef struct {
   double x, y;
   // この点から伸びる道の情報
   vector<int> next;
-  vector<int> road;
+  vector<double> road;
 
   // ダイクストラ法のためのデータ
   int done;
