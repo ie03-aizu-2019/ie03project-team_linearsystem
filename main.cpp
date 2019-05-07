@@ -3,7 +3,6 @@
 #include "main.h"
 #include "stdlib.h"
 
-void print_for_debug(vector<Point>, vector< vector<int> >, vector< vector<int> >, vector<Point>);
 
 int main(){
   int N, M, P, Q;   // 座標の数, 道の数, 追加される地点の数, 経路問い合わせの数
@@ -42,9 +41,6 @@ int main(){
     scanf("%d",&tmp[2]);
     route.push_back(vector<int>(tmp, tmp+3));
   }
-  
-
-    print_for_debug(p, road, route, c_p);
 
   return 0;
 }
