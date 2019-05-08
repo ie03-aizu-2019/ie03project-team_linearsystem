@@ -20,7 +20,7 @@ Point init_point(double, double);
 */
 
 
-int cross_p(Point P1,Point P2,Point Q1,Point Q2){
+Point cross_p(Point P1,Point P2,Point Q1,Point Q2){
   double step1=0;
   double s=0,t=0;
   double x=0,y=0;//交差点の座標
