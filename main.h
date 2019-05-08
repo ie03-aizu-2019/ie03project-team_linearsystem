@@ -1,3 +1,6 @@
+#pragma once
+
+#include "vector"
 using namespace std;
 
 typedef struct {
@@ -12,4 +15,7 @@ typedef struct {
   int cost;
 } Point;
 
+
 Point init_point(double, double);
+
+Point cross_p(Point, Point, Point, Point);
