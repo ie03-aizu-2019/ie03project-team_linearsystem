@@ -2,7 +2,7 @@
 #include <vector>
 #include <math.h>
 
-void length(vector<point> & array){
+void length(std::vector<point> & array){
 
   double l;//長さを一時保存
 
@@ -12,7 +12,7 @@ void length(vector<point> & array){
     for(int j=0;j<array[i].next.size();j++){//arrayのnextのサイズの大きさ分
 	
       l=((array[i].x-array[array[i].next[j]].x)*(array[i].x-array[array[i].next[j]].x))
-	  -((array[i].array[array[i].next[j]].y))*(array[i].array[array[i].next[j].y))); //長さを求める	
+        -((array[i].array[array[i].next[j]].y))*(array[i].array[array[i].next[j]].y))); //長さを求める	
     
     l=sqrt(l);//平方根
 
