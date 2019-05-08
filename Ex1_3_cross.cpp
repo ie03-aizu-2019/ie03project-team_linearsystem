@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-//構造体
+/*//構造体
 using namespace std;
 
 typedef struct {
@@ -17,7 +17,7 @@ typedef struct {
 
 Point init_point(double, double);
 //構造体終わり
-
+*/
 
 
 int cross_p(Point P1,Point P2,Point Q1,Point Q2){
