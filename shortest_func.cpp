@@ -22,16 +22,15 @@ void shortest(vector<Point>&array,Route P){
 
     //接続ノードの情報を更新する
     for(int j=0;doneNode.next[j].size()-1>j;j++){
-
       next[j]=doneNode.next[j];
-
       cost=doneNode.next[j]+doneNode.road[j];
 
       if(array[next[j]].cost<0 || cost<array[next[j]]).cost){
-      
       array[next[j].cost=cost;
 	    P.road_data[0].cost=cost;
-	    }
+    }
+            
     }
 
   }
+            }
