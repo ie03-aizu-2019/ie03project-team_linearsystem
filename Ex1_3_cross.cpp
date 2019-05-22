@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-#include "main.h"
+#include"main.h"
 /*//構造体
 using namespace std;
 
