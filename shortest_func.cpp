@@ -16,15 +16,11 @@ void shortest(vector<Point>&array,Route P){
     }
     array[P->start].cost=0.0;
     
-    
-    
   while(1){
-
     Point doneNode;
       doneNde.x=-1;
       
     for(int i=0; array.size()>i;i++){
-
       if(array[y].done || array[i].cost<0){
           continue;
       }
