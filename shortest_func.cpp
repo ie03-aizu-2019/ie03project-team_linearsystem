@@ -2,10 +2,10 @@
 #include "main.h"
 #include "debug.h"
 
-void shortest(vector<Point>&array,Route P){
+void shortest(vector<Point>&array,Route p){
     int count =0;
     
-    if(P->start>array.size()){
+    if(p->start>array.size()){
         puts("NA");
         return;
     }
@@ -14,7 +14,7 @@ void shortest(vector<Point>&array,Route P){
         array[i].done=false;
         array[i].cost=-1.0;
     }
-    array[P->start].cost=0.0;
+    array[p->start].cost=0.0;
     
   while(1){
     Point doneNode;
@@ -37,14 +37,15 @@ void shortest(vector<Point>&array,Route P){
     //接続ノードの情報を更新する
     for(int j=0;doneNode.edges_to.size()>j;j++){
       int next[j]=doneNode.edges_to[j];
-        double cost=doneNode.edges_to[j]+doneNode.edges_cost[j];
+        double cost=doneNode.cost+doneNode.edges_cost[j];
 
       if(array[next[j]].cost<0 || cost<array[next].cost){
       array[next].cost=cost;
-	    P.route_data[0].cost=cost;
+	    p.route_data[0].cost=cost;
     }
             
     }
   }
   }
+p->route_data[0].cost = array[p->goal].cost;
             }
