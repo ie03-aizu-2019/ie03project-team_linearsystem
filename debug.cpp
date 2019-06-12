@@ -34,7 +34,7 @@ void print_for_debug(vector<Point> p,int f1, vector<Point>c_p, int f2, vector<Po
     puts("");
   }
   else if(f2 == 2){
-    printf("___c_p (size:%lu)___\n",c_p.size());
+    printf("___c_p (size:%lu)___:debug_mode 2\n",c_p.size());
     for(int i=0; i<c_p.size(); i++){
       printf("x:%f,y:%f\nnext(size=%lu): ",c_p[i].x, c_p[i].y, c_p[i].edges_to.size());
       for(int j=0; j<c_p[i].edges_to.size(); j++){
@@ -53,7 +53,7 @@ void print_for_debug(vector<Point> p,int f1, vector<Point>c_p, int f2, vector<Po
     puts("");
   }
   else if(f3 == 2){
-    printf("___a_p (size:%lu)___\n",a_p.size());
+    printf("___a_p (size:%lu)___:debug_mode 2\n",a_p.size());
     for(int i=0; i<a_p.size(); i++){
       printf("a_p[%d] ",i);
       if(i<N) printf("(%d)\n",i+1);
@@ -66,6 +66,7 @@ void print_for_debug(vector<Point> p,int f1, vector<Point>c_p, int f2, vector<Po
       for(int j=0; j<a_p[i].edges_cost.size(); j++){
         printf("%f ",a_p[i].edges_cost[j]);
       }
+      printf("\nindex:%d\n",a_p[i].index);
       puts("\n");
     }
     puts("");

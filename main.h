@@ -12,15 +12,13 @@ typedef struct {
   // 座標のデータ
   double x, y;
   // この点から伸びる道の情報
-  // vector<int> next;
   vector<int> edges_to;
-  // vector<double> road_len;
   vector<double> edges_cost;
-  vector<int> edges_from;
 
   // ダイクストラ法のためのデータ
   int done;
   double cost;
+  int from;
 } Point;
 
 // RouteData   道の詳細情報
