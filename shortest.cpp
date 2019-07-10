@@ -51,4 +51,3 @@ void shortest(p,Route *r_p){
     if(from == r_p->start) break;
   }
 }
-
