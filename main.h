@@ -1,54 +1,45 @@
 #pragma once
 
-#include "vector"
-using namespace std;
+#include <vector>
+using std::vector;
 
 #define BUF_SIZE 8
 
-// Point   点のデータ関係
-typedef struct {
+// Point (地点の情報)
+typedef struct{
   // 入力した順番 (バックアップ目的)
   int index;
-  // 座標のデータ
+  // 座標
   double x, y;
-  // この点から伸びる道の情報
+
+  // 点から伸びる情報
   vector<int> edges_to;
   vector<double> edges_cost;
 
   // ダイクストラ法のためのデータ
-  int done;
-  double cost;
-  int from;
-} Point;
-
-// RouteData   道の詳細情報
-typedef struct {
-  double cost;  // 道の長さ
-  vector<int> route_detail; // 経路の詳細
-} RouteData;
-
-// Route   経路情報
-typedef struct {
-  // 始点終点のデータ
-  int start, goal, want_num;
-  char C[2][BUF_SIZE];
-
-  // 経路のデータ
-  vector<RouteData> route_data;
-} Route;
-
-// prototype deeclation
-Point init_point(double, double);
-Point init_point(double, double, int);
-Route init_route();
-
-void get_route(int *);
-void add_connect(vector<Point>&, int, int);
-
-Point cross_p(Point, Point, Point, Point);
-void length(std::vector<Point>&);
-void shortest(vector<Point>&,Route*);
+  int done;     // 確定フラグ
+  double cost;  // この点までの最短距離
+  int from;     // どこの点から来たか
+}Point;
 
 
-// global variable
-extern int N, M, P, Q;   // 座標の数, 道の数, 追加される地点の数, 経路問い合わせの数
+// Route (経路情報)
+typedef struct{
+  // 始点、終点、問い合わせ数
+  int s, d, k;
+  char start[BUF_SIZE], goal[BUF_SIZE];
+
+  // 経路の詳細データ
+  vector<double> cost;
+  vector< vector<int> > course;
+}Route;
+
+// グローバル変数
+extern int N, M, P, Q;
+extern vector<Point> p;
+extern vector<Point> inp_p;
+extern vector<Point> add_p;
+extern vector<Point> c_p;
+extern vector< vector<int> > road;
+extern vector<Route> route;
+extern vector< vector<double> > matrix;
