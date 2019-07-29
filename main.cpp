@@ -34,12 +34,10 @@ int main(int argc, char* argv[]){
   set_edge_data();
 
   // 最短経路を求める
-  for(int i=1; i<route.size(); i++) {
-    shortest(&route[i]);
+  for(int i=1; i<route.size(); i++) k_shortest(&route[i]);
 
-    phase1_4_out(route[i]);
-  }
-
+  // 結果を表示
+  phase2_6_out();
 
 
   return 0;
