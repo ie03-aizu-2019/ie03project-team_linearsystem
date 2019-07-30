@@ -2,7 +2,7 @@
 
 ## メンバー
 
-- ### s1250139 Magata Satomi
+- ### s1250139 Nagata Satomi
 - ### s1250164 Munakata Ren
 
 ## 進捗状況
